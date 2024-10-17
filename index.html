@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Portfolio Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dev Portfolio Generator</h1>
+        <form id="portfolioForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="title">Job Title:</label>
+            <input type="text" id="title" required>
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" required></textarea>
+
+            <label for="skills">Skills (comma-separated):</label>
+            <input type="text" id="skills" required>
+
+            <label for="github">GitHub URL:</label>
+            <input type="url" id="github" required>
+
+            <label for="projects">Projects (JSON format):</label>
+            <textarea id="projects" required placeholder='[
+  {"name": "Project 1", "description": "Description 1", "url": "https://example1.com"},
+  {"name": "Project 2", "description": "Description 2", "url": "https://example2.com"}
+]'></textarea>
+
+            <label for="primaryColor">Primary Color:</label>
+            <input type="color" id="primaryColor" value="#333333">
+
+            <label for="secondaryColor">Secondary Color:</label>
+            <input type="color" id="secondaryColor" value="#f4f4f4">
+
+            <label for="accentColor">Accent Color:</label>
+            <input type="color" id="accentColor" value="#4CAF50">
+
+            <button type="submit">Generate Portfolio</button>
+        </form>
+
+        <div id="output" style="display: none;">
+            <h2>Generated HTML:</h2>
+            <textarea id="htmlOutput" readonly></textarea>
+            <button onclick="copyToClipboard('htmlOutput')">Copy HTML</button>
+
+            <h2>Generated CSS:</h2>
+            <textarea id="cssOutput" readonly></textarea>
+            <button onclick="copyToClipboard('cssOutput')">Copy CSS</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
