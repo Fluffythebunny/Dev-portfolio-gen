@@ -73,7 +73,7 @@ function generatePortfolio() {
         </section>
     </main>
     <footer>
-        <p>&copy; ${new Date().getFullYear()} ${name}. All rights reserved.</p>
+        <p>&copy; ${new Date().getFullYear()} ${name}. All rights reserved. made using dev-portfolio-gen-hyfjq.kinsta.page</p>
     </footer>
 </body>
 </html>
